@@ -5,6 +5,8 @@ import cn.z.id.Id;
 import cn.z.ip2region.Ip2Region;
 import cn.z.phone2region.Phone2Region;
 import cn.z.qrcode.encoder.QRCode;
+import cn.z.tinytoken.spring.T4s;
+import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.ResponseEntity.BodyBuilder;
@@ -31,7 +33,10 @@ import java.sql.Timestamp;
  * @since 1.0.0
  **/
 @RestController
+@AllArgsConstructor
 public class IndexController {
+
+    private final T4s t4s;
 
     /**
      * 时间
@@ -83,6 +88,14 @@ public class IndexController {
         QRCode qr = new QRCode(content);
         BufferedImage image = qrMatrix2Image(qr.Matrix, 10);
         return download(userAgent, image, "qr.png");
+    }
+
+    /**
+     * 轻量级权限认证
+     */
+    @GetMapping("tiny-token")
+    public String tinyToken() {
+        return t4s.getToken();
     }
 
     /**

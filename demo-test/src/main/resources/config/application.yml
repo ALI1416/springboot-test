@@ -17,6 +17,10 @@ ip2region:
 phone2region:
   resource-path: /file/phone2region/phone2region.zdb
 
+tiny-token:
+  name: tinytoken
+  timeout: 2592000
+
 logging:
   file:
     name: /log/demo-test.log

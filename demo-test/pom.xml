@@ -64,6 +64,11 @@
       <groupId>cn.404z</groupId>
       <artifactId>qrcode-encoder</artifactId>
     </dependency>
+    <!--轻量级权限认证SpringBoot启动器-->
+    <dependency>
+      <groupId>cn.404z</groupId>
+      <artifactId>tiny-token-spring-boot-starter</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

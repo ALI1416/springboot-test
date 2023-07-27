@@ -19,7 +19,7 @@
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.10</version>
+    <version>2.7.14</version>
   </parent>
 
   <modules>
@@ -50,7 +50,7 @@
     <!-- https://mvnrepository.com/artifact/cn.404z/id -->
     <!--cn.404z:id-spring-boot-autoconfigure-->
     <!-- https://mvnrepository.com/artifact/cn.404z/id-spring-boot-autoconfigure -->
-    <id.version>2.6.0</id.version>
+    <id.version>2.7.0</id.version>
 
     <!--IP地址转区域-->
     <!--cn.404z:ip2region-->
@@ -70,6 +70,11 @@
     <!--cn.404z:qrcode-encoder-->
     <!-- https://mvnrepository.com/artifact/cn.404z/qrcode-encoder -->
     <qrcode-encoder.version>1.1.0</qrcode-encoder.version>
+
+    <!--轻量级权限认证SpringBoot启动器-->
+    <!--cn.404z:tiny-token-spring-boot-starter-->
+    <!-- https://mvnrepository.com/artifact/cn.404z/tiny-token-spring-boot-starter -->
+    <tiny-token.version>1.0.0</tiny-token.version>
   </properties>
 
   <dependencies>
@@ -176,6 +181,12 @@
         <groupId>cn.404z</groupId>
         <artifactId>qrcode-encoder</artifactId>
         <version>${qrcode-encoder.version}</version>
+      </dependency>
+      <!--轻量级权限认证SpringBoot启动器-->
+      <dependency>
+        <groupId>cn.404z</groupId>
+        <artifactId>tiny-token-spring-boot-starter</artifactId>
+        <version>${tiny-token.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
